@@ -1,0 +1,27 @@
+講義で学んだことの復習がてらに作ったプログラムの寄せ集め。
+
+mymkdir.sh
+
+実行時、コマンドライン引数として
+$1に作成したいディレクトリのパス
+$2に共通のファイル名
+$3に作成したいディレクトリ数
+を与えると、
+
+共通のファイル名_ファイル番号
+
+の形式で、作成したいディレクトリ数分のディレクトリが作成される
+
+もしパスのディレクトリが存在しない場合は、新規にそのディレクトリを作成する
+
+使用例)
+
+[~/Experiment_1]$ ./mymkdir.sh ~/Experiment_1/hoge fuga 3
+./mymkdir.sh: line 16: cd: /Users/e115703/Experiment_1/hoge: No such file or directory
+該当するディレクトリはありません。新規作成します
+/Users/e115703/Experiment_1/hogeに共通名fugaで3個のディレクトリを作成しました。
+[~/Experiment_1]$ ls
+README     hoge       mymkdir.sh
+[~/Experiment_1]$ cd hoge && ls
+fuga_1 fuga_2 fuga_3
+[~/Experiment_1/hoge]$ 
